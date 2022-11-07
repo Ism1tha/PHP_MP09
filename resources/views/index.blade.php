@@ -50,7 +50,7 @@ require 'app/models/Task.php';
                     <td>'.$dada['id'].'</td>
                     <td>'.$dada['title'].'</td>
                     <td>'.$dada['description'].'</td>
-                    <td>'.$dada['completed'].'</td>
+                    <td>'.parse_boolean($dada['completed']).'</td>
                     </tr>   ';
                 }
             ?>
