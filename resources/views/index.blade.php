@@ -18,14 +18,14 @@ require 'app/models/Task.php';
         .welcome{
             color: white;
             padding: 10px;
-            background-color: #ffcf4d;
+            background-color: gray;
         }
 
         .content{
             color: white;
             margin-top: 15px;
             padding: 10px;
-            background-color: #ffcf4d;
+            background-color: gray;
         }
 
     </style>
@@ -36,25 +36,7 @@ require 'app/models/Task.php';
     </div>
     <div class="content">
         <h2>Tasques</h2>
-        <table>
-            <tr>
-                <td>ID</td>
-                <td>Title</td>
-                <td>Description</td>
-                <td>Completed</td>
-            </tr>
-            <?php
-                foreach ($dades as $dada){
-                    echo '
-                    <tr>
-                    <td>'.$dada['id'].'</td>
-                    <td>'.$dada['title'].'</td>
-                    <td>'.$dada['description'].'</td>
-                    <td>'.parse_boolean($dada['completed']).'</td>
-                    </tr>   ';
-                }
-            ?>
-        </table>
+        <?=$tasques;?>
     </div>
 </body>
 </html>

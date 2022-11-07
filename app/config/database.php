@@ -11,8 +11,4 @@ try{
     echo $e->getMessage();
 }
 
-$sentencia = $db->prepare("SELECT * FROM tasks");
-$sentencia->execute();
-$dades = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
