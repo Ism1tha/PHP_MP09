@@ -1,3 +1,0 @@
-<?php
-
-$greeting = 'Hola mon!';

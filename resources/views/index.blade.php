@@ -1,3 +1,10 @@
+<?php
+
+require 'app/controllers/view.controller.php';
+require 'app/models/Task.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +15,46 @@
 
     <style>
 
-        body{
-            background-color: #f5f5f5;
-            text-align: center;
+        .welcome{
+            color: white;
+            padding: 10px;
+            background-color: #ffcf4d;
+        }
+
+        .content{
+            color: white;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #ffcf4d;
         }
 
     </style>
 </head>
 <body>
-    <h1><?=$greeting;?></h1>
+    <div class="welcome">
+        <h1><?=$greeting;?></h1>
+    </div>
+    <div class="content">
+        <h2>Tasques</h2>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Description</td>
+                <td>Completed</td>
+            </tr>
+            <?php
+                foreach ($dades as $dada){
+                    echo '
+                    <tr>
+                    <td>'.$dada['id'].'</td>
+                    <td>'.$dada['title'].'</td>
+                    <td>'.$dada['description'].'</td>
+                    <td>'.$dada['completed'].'</td>
+                    </tr>   ';
+                }
+            ?>
+        </table>
+    </div>
 </body>
 </html>
